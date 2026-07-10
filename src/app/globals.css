@@ -1,47 +1,139 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-dusk: var(--dusk);
+  --color-dusk-2: var(--dusk-2);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --color-mist: var(--mist);
+  --color-signal: var(--signal);
+  --color-static: var(--static);
+  
+  --font-display: var(--font-display);
+  --font-script: var(--font-script);
+  --font-mono: var(--font-mono);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #111111;
-  --secondary: #666666;
-  --muted: #f5f5f5;
-  --border: #e5e5e5;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #f5f5f5;
-    --secondary: #a1a1a1;
-    --muted: #1a1a1a;
-    --border: #262626;
-  }
-}
-
-* {
-  @apply border-[var(--border)];
-}
-
-html {
-  scroll-behavior: smooth;
+  --ink: #0b1626;
+  --ink-2: #101f36;
+  --dusk: #1c2e45;
+  --dusk-2: #263c58;
+  --sky: #9fc6e8;
+  --sky-soft: #cfe3f2;
+  --mist: #eaf1f8;
+  --signal: #f4d35e;
+  --static: #ff5fa2;
+  --ticket-border: rgba(159, 198, 232, 0.35);
+  --ticket-radius: 18px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), sans-serif;
+  background-color: var(--ink);
+  color: var(--mist);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-::selection {
-  background: var(--foreground);
-  color: var(--background);
+/* Noise overlay */
+.grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* Ticket base and cutout styles */
+.ticket-edge {
+  position: relative;
+  background-color: var(--dusk);
+  border: 1px dashed var(--ticket-border);
+  border-radius: var(--ticket-radius);
+  overflow: visible;
+}
+
+/* Cutout styling using absolute position overlays matching background */
+.ticket-cutout-left,
+.ticket-cutout-right {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--ink);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.ticket-cutout-left {
+  left: -13px;
+  border-right: 1px dashed var(--ticket-border);
+}
+.ticket-cutout-right {
+  right: -13px;
+  border-left: 1px dashed var(--ticket-border);
+}
+
+/* For vertical ticket split cutouts (on the vertical separator line) */
+.ticket-cutout-top,
+.ticket-cutout-bottom {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--ink);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.ticket-cutout-top {
+  top: -11px;
+  border-bottom: 1px dashed var(--ticket-border);
+}
+.ticket-cutout-bottom {
+  bottom: -11px;
+  border-top: 1px dashed var(--ticket-border);
+}
+
+/* Split-flap keyframe for character lật lật */
+@keyframes flap {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(-90deg);
+    background-color: var(--dusk-2);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.split-flap-char {
+  display: inline-block;
+  perspective: 100px;
+  transform-style: preserve-3d;
+}
+
+.split-flap-inner {
+  animation: flap 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .split-flap-inner {
+    animation: none !important;
+  }
 }
