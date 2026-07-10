@@ -5,7 +5,7 @@ import GrainOverlay from "@/components/GrainOverlay";
 import Navigation from "@/components/layout/Navigation";
 import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
-
+import Footer from "@/components/layout/Footer";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -48,7 +48,10 @@ export default function RootLayout({
       <body className="min-h-full bg-[var(--ink)] text-[var(--mist)] flex flex-col antialiased selection:bg-[var(--signal)] selection:text-[var(--ink)]">
         <GrainOverlay />
         <CustomCursor />
-        <PageTransition>{children}</PageTransition>
+        <div className="flex-1 flex flex-col">
+          <PageTransition>{children}</PageTransition>
+        </div>
+        <Footer />
         <Navigation />
       </body>
     </html>
