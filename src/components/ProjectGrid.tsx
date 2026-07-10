@@ -2,7 +2,15 @@
 
 import ProjectCard from "./ProjectCard";
 
-const projects = [
+type Project = {
+  id: number;
+  title: string;
+  category: string;
+  thumbnail: string;
+  videoUrl?: string;
+};
+
+const projects: Project[] = [
   {
     id: 1,
     title: "Minimalist Identity",
