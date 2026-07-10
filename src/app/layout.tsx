@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Instrument_Serif, Space_Mono, Inter } from "next/font/google";
+import { Fraunces, Caveat, Space_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import GrainOverlay from "@/components/GrainOverlay";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/layout/Navigation";
 import PageTransition from "@/components/PageTransition";
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -11,17 +12,16 @@ const inter = Inter({
   weight: ["300", "400", "500", "600"],
 });
 
-const spaceGrotesk = Space_Grotesk({
+const fraunces = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const instrumentSerif = Instrument_Serif({
+const caveat = Caveat({
   variable: "--font-script",
   subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const spaceMono = Space_Mono({
@@ -31,8 +31,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Boarding Pass Portfolio",
-  description: "Nền tảng portfolio cá nhân độc đáo theo concept Boarding Pass.",
+  title: "Dreamy Blue Collage Portfolio",
+  description: "A portfolio inspired by indie zine and collage aesthetics.",
 };
 
 export default function RootLayout({
@@ -43,10 +43,11 @@ export default function RootLayout({
   return (
     <html
       lang="vi"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} ${spaceMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${fraunces.variable} ${caveat.variable} ${spaceMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-ink text-mist flex flex-col antialiased selection:bg-signal selection:text-ink">
+      <body className="min-h-full bg-[var(--ink)] text-[var(--mist)] flex flex-col antialiased selection:bg-[var(--signal)] selection:text-[var(--ink)]">
         <GrainOverlay />
+        <CustomCursor />
         <PageTransition>{children}</PageTransition>
         <Navigation />
       </body>

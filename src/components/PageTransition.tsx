@@ -20,38 +20,21 @@ export default function PageTransition({ children }: { children: React.ReactNode
           {children}
         </motion.div>
 
-        {/* Transition Gate Overlays (Exiting page) */}
-        {/* Left Gate Panel */}
+        {/* Transition Wipe (Exiting page) */}
         <motion.div
-          className="fixed inset-y-0 left-0 w-1/2 bg-ink-2 z-[9999] pointer-events-none border-r border-sky/10"
-          initial={{ x: "-100%" }}
-          animate={{ x: "-100%" }}
-          exit={{ x: "0%" }}
-          transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
-        />
-        {/* Right Gate Panel */}
-        <motion.div
-          className="fixed inset-y-0 right-0 w-1/2 bg-ink-2 z-[9999] pointer-events-none border-l border-sky/10"
-          initial={{ x: "100%" }}
-          animate={{ x: "100%" }}
-          exit={{ x: "0%" }}
-          transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
+          className="fixed inset-y-0 left-0 w-full bg-[var(--ink)] z-[9999] pointer-events-none origin-left"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 0 }}
+          exit={{ scaleX: 1 }}
+          transition={{ duration: 0.5, ease: [0.645, 0.045, 0.355, 1] }}
         />
 
-        {/* Transition Gate Overlays (Entering page) */}
-        {/* Left Gate Panel sliding out */}
+        {/* Transition Wipe (Entering page) */}
         <motion.div
-          className="fixed inset-y-0 left-0 w-1/2 bg-ink-2 z-[9999] pointer-events-none border-r border-sky/10"
-          initial={{ x: "0%" }}
-          animate={{ x: "-100%" }}
-          transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
-        />
-        {/* Right Gate Panel sliding out */}
-        <motion.div
-          className="fixed inset-y-0 right-0 w-1/2 bg-ink-2 z-[9999] pointer-events-none border-l border-sky/10"
-          initial={{ x: "0%" }}
-          animate={{ x: "100%" }}
-          transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
+          className="fixed inset-y-0 left-0 w-full bg-[var(--ink)] z-[9999] pointer-events-none origin-right"
+          initial={{ scaleX: 1 }}
+          animate={{ scaleX: 0 }}
+          transition={{ duration: 0.5, ease: [0.645, 0.045, 0.355, 1], delay: 0.1 }}
         />
       </motion.div>
     </AnimatePresence>
