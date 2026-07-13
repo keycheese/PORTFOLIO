@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Caveat, Space_Mono, Inter } from "next/font/google";
+import { Fraunces, Caveat, Space_Mono, Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import GrainOverlay from "@/components/GrainOverlay";
 import Navigation from "@/components/layout/Navigation";
@@ -30,8 +30,20 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--studio-body",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--studio-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
-  title: "Dreamy Blue Collage Portfolio",
+  title: "Portfolio",
   description: "A portfolio inspired by indie zine and collage aesthetics.",
 };
 
@@ -42,8 +54,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="vi"
-      className={`${inter.variable} ${fraunces.variable} ${caveat.variable} ${spaceMono.variable} h-full antialiased`}
+      lang="en"
+      className={`${inter.variable} ${fraunces.variable} ${caveat.variable} ${spaceMono.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[var(--ink)] text-[var(--mist)] flex flex-col antialiased selection:bg-[var(--signal)] selection:text-[var(--ink)]">
         <GrainOverlay />

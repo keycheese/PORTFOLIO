@@ -10,9 +10,9 @@ interface Props {
 }
 
 /**
- * Khung dùng chung cho 5 section: Học vấn, Dự án, Ngoại khoá, Kinh nghiệm, Sở thích.
- * Mỗi section = 1 "trang" full-viewport, có tem nhãn kiểu vé + tiêu đề lớn,
- * nội dung con (children) do từng section tự định nghĩa (timeline, grid thẻ, v.v).
+ * Shared wrapper for the 5 sections: Education, Projects, Activities, Experience, Hobbies.
+ * Each section = 1 full-viewport "page", with a ticket-style stamp label + large heading,
+ * and child content (children) defined individually by each section (timeline, card grid, etc.).
  */
 export default function SectionWrapper({ section, children }: Props) {
   return (

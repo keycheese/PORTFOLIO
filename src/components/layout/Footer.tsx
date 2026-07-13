@@ -9,10 +9,10 @@ export default function Footer() {
             // PORTFOLIO 2026
           </span>
           <h2 className="font-[var(--font-display)] text-3xl md:text-4xl text-[var(--mist)] uppercase tracking-tight">
-            [Tên của bạn]
+            [Your Name]
           </h2>
           <p className="font-[var(--font-script)] text-xl md:text-2xl text-[var(--sky-soft)] italic">
-            "Thiết kế bền vững kết hợp với chuyển động tinh tế."
+            "Timeless design paired with intentional motion."
           </p>
         </div>
 

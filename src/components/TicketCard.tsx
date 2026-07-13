@@ -5,11 +5,11 @@ import React, { useRef, MouseEvent, useState } from "react";
 
 interface TicketCardProps {
   code: string; // e.g., "2023 - 2026" or "PRJ-01"
-  tag: string;  // e.g., "Đại học", "Freelance", "Design"
+  tag: string;  // e.g., "University", "Freelance", "Design"
   title: string;
   subtitle?: string;
   description: string | React.ReactNode;
-  accentPoint?: boolean; // Tối đa 1 điểm nhấn tĩnh trên trang
+  accentPoint?: boolean; // At most 1 static highlight per page
 }
 
 export default function TicketCard({
@@ -67,7 +67,7 @@ export default function TicketCard({
       {/* Sticky Tape / Note detail */}
       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-[var(--mist)]/80 backdrop-blur-sm border border-[var(--ticket-border)] rotate-2 z-10 shadow-sm"></div>
 
-      {/* LEFT COLUMN: Cuống vé (Stub) */}
+      {/* LEFT COLUMN: Ticket Stub */}
       <div 
         className="relative flex flex-col justify-between items-start pb-6 md:pb-0 border-b md:border-b-0 md:border-r border-dashed border-[var(--ticket-border)] md:pr-8 min-w-[140px] md:max-w-[200px]"
         style={{ transform: "translateZ(10px)" }}
@@ -86,7 +86,7 @@ export default function TicketCard({
         </div>
       </div>
 
-      {/* RIGHT COLUMN: Nội dung chính */}
+      {/* RIGHT COLUMN: Main Content */}
       <div 
         className="flex-1 flex flex-col justify-center"
         style={{ transform: "translateZ(20px)" }}

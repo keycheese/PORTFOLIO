@@ -5,36 +5,36 @@ import { Camera, PenTool, Film, Music, BookOpen } from "lucide-react";
 
 const HOBBIES = [
   {
-    title: "CHỤP ẢNH FILM",
-    desc: "Bắt trọn khoảnh khắc qua lăng kính cơ học cổ điển và chất màu hoài niệm từ những hạt muối bạc.",
+    title: "FILM PHOTOGRAPHY",
+    desc: "Capturing fleeting moments through the lens of a classic mechanical camera and the nostalgic tones of silver-halide grain.",
     icon: Camera,
     span: "md:col-span-2 md:row-span-2 h-80 md:h-[420px]",
     bgGradient: "from-dusk via-ink-2 to-dusk-2",
   },
   {
-    title: "VẼ MINH HOẠ",
-    desc: "Sáng tạo thế giới nhân vật sống động thông qua cọ vẽ kỹ thuật số và các bản phác thảo hình hoạ.",
+    title: "ILLUSTRATION",
+    desc: "Crafting vivid character worlds through digital brushwork and hand-drawn figure sketches.",
     icon: PenTool,
     span: "md:col-span-1 md:row-span-1 h-56 md:h-[198px]",
     bgGradient: "from-dusk-2 to-ink-2",
   },
   {
-    title: "XEM PHIM",
-    desc: "Nghiên cứu góc quay, kỹ thuật dựng cảnh và cách phối màu sắc từ các bộ phim điện ảnh kinh điển.",
+    title: "WATCHING FILMS",
+    desc: "Studying camera angles, scene composition, and colour grading from classic and contemporary cinema.",
     icon: Film,
     span: "md:col-span-1 md:row-span-2 h-80 md:h-[420px]",
     bgGradient: "from-dusk to-ink-2",
   },
   {
-    title: "NGHE NHẠC LO-FI",
-    desc: "Tìm kiếm sự tập trung cao độ trong các phiên làm việc đêm khuya lúc 2 giờ sáng cùng nhạc chillhop.",
+    title: "LO-FI MUSIC",
+    desc: "Finding deep focus during late-night work sessions at 2 AM with chillhop and ambient soundscapes.",
     icon: Music,
     span: "md:col-span-1 md:row-span-1 h-56 md:h-[198px]",
     bgGradient: "from-dusk-2 to-dusk",
   },
   {
-    title: "ĐỌC SÁCH NGHỆ THUẬT",
-    desc: "Tiếp thu tinh hoa tư duy của thế hệ đi trước để cải thiện tri thức thẩm mỹ và bố cục chữ viết.",
+    title: "ART BOOKS",
+    desc: "Absorbing the design wisdom of past generations to sharpen my aesthetic thinking and typographic sensibility.",
     icon: BookOpen,
     span: "md:col-span-2 md:row-span-1 h-56 md:h-[198px]",
     bgGradient: "from-dusk via-ink-2 to-dusk-2",
@@ -51,7 +51,7 @@ export default function HobbiesPage() {
             GATE 06 // PERSONAL INTERESTS
           </span>
           <h1 className="font-display text-4xl md:text-5xl font-extrabold text-mist tracking-tight mt-1 uppercase">
-            Sở thích cá nhân
+            Personal Interests
           </h1>
         </div>
 

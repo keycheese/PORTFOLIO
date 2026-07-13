@@ -34,7 +34,7 @@ export default function Navigation() {
 
   return (
     <nav
-      aria-label="Điều hướng các phần trang web"
+      aria-label="Website section navigation"
       className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-5 md:flex"
     >
       {sections.map((s) => {

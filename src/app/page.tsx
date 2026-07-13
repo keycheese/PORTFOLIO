@@ -3,7 +3,7 @@ import HomeSection from "@/components/sections/HomeSection";
 import SectionWrapper from "@/components/sections/SectionWrapper";
 import { sections } from "@/lib/sections";
 
-// Lấy config section theo id để truyền vào SectionWrapper
+// Get section config by id to pass into SectionWrapper
 const byId = (id: string) => sections.find((s) => s.id === id)!;
 
 export default function Home() {
@@ -16,15 +16,15 @@ export default function Home() {
         <HomeSection />
 
         <SectionWrapper section={byId("education")}>
-          {/* TODO: thay bằng timeline thật — mỗi item là 1 card-ticket */}
+          {/* TODO: replace with real timeline — each item is a card-ticket */}
           <div className="grid gap-6 md:grid-cols-2">
-            {["Trường cấp 3", "Đại học", "Khoá học ngoài", "Chứng chỉ"].map(
+            {["High School", "University", "Online Courses", "Certifications"].map(
               (label) => (
                 <div key={label} className="card-ticket p-6">
-                  <p className="stamp-label mb-3 inline-block">2023 — nay</p>
+                  <p className="stamp-label mb-3 inline-block">2023 — present</p>
                   <h3 className="font-[--font-display] text-xl">{label}</h3>
                   <p className="mt-2 text-sm text-[--ink-navy]/70">
-                    Mô tả ngắn sẽ được bổ sung sau.
+                    Short description to be added.
                   </p>
                 </div>
               )
@@ -33,17 +33,17 @@ export default function Home() {
         </SectionWrapper>
 
         <SectionWrapper section={byId("school-projects")}>
-          {/* TODO: grid dự án — click mở modal/trang chi tiết từng dự án */}
+          {/* TODO: project grid — click to open modal/detail page */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {["Design", "TVC", "Phim ngắn"].map((label) => (
+            {["Design", "TVC", "Short Film"].map((label) => (
               <div
                 key={label}
                 className="card-ticket group aspect-[4/5] cursor-pointer overflow-hidden p-6 transition-transform hover:-translate-y-1"
               >
-                <p className="stamp-label mb-3 inline-block">Môn học</p>
+                <p className="stamp-label mb-3 inline-block">Course</p>
                 <h3 className="font-[--font-display] text-xl">{label}</h3>
                 <p className="mt-2 text-sm text-[--ink-navy]/70">
-                  Sẽ bổ sung sản phẩm thực tế + ảnh/video sau.
+                  Actual work + photos/videos to be added.
                 </p>
               </div>
             ))}
@@ -52,10 +52,10 @@ export default function Home() {
 
         <SectionWrapper section={byId("activities")}>
           <div className="space-y-4">
-            {["CLB tại trường", "Sự kiện trường", "Hoạt động bên ngoài"].map(
+            {["School Club", "Campus Events", "External Activities"].map(
               (label) => (
                 <div key={label} className="card-ticket flex items-center gap-4 p-5">
-                  <span className="stamp-label">CLB</span>
+                  <span className="stamp-label">CLUB</span>
                   <h3 className="font-[--font-display] text-lg">{label}</h3>
                 </div>
               )
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2">
             {["Part-time", "Freelance"].map((label) => (
               <div key={label} className="card-ticket p-6">
-                <p className="stamp-label mb-3 inline-block">Kinh nghiệm</p>
+                <p className="stamp-label mb-3 inline-block">Experience</p>
                 <h3 className="font-[--font-display] text-xl">{label}</h3>
               </div>
             ))}
@@ -76,7 +76,7 @@ export default function Home() {
 
         <SectionWrapper section={byId("hobbies")}>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {["Chụp ảnh", "Vẽ", "Xem phim", "Nghe nhạc"].map((label) => (
+            {["Photography", "Drawing", "Watching Films", "Listening to Music"].map((label) => (
               <div
                 key={label}
                 className="card-ticket flex aspect-square items-center justify-center p-4 text-center"

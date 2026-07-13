@@ -5,34 +5,34 @@ import TicketCard from "@/components/TicketCard";
 const educationHistory = [
   {
     code: "2023 - PRES",
-    tag: "ĐẠI HỌC",
-    title: "[Tên trường Đại học của bạn]",
-    subtitle: "Chuyên ngành Thiết kế Đa phương tiện // Multimedia Design",
-    description: "Tập trung học tập các học phần nâng cao về UI/UX Design, Kỹ thuật Video, Kịch bản Phim ngắn và Mỹ thuật Đồ họa. Điểm trung bình tích lũy hiện tại đạt mức Xuất sắc [GPA].",
+    tag: "UNIVERSITY",
+    title: "[Your University Name]",
+    subtitle: "Major: Multimedia Design",
+    description: "Focusing on advanced courses in UI/UX Design, Video Production, Short Film Scriptwriting, and Graphic Arts. Current cumulative GPA at an Excellent level [GPA].",
     accentPoint: true,
   },
   {
     code: "2020 - 2023",
-    tag: "THPT",
-    title: "[Tên trường THPT của bạn]",
-    subtitle: "Lớp chuyên / Khối chuyên học thuật",
-    description: "Đạt danh hiệu Học sinh Giỏi xuất sắc trong 3 năm học. Tích cực tham gia các phong trào học thuật của trường lớp.",
+    tag: "HIGH SCHOOL",
+    title: "[Your High School Name]",
+    subtitle: "Advanced / Honors Track",
+    description: "Awarded Academic Excellence for 3 consecutive years. Actively participated in school academic programs and extracurricular activities.",
     accentPoint: false,
   },
   {
     code: "2024",
-    tag: "CHUYÊN ĐỀ NÂNG CAO",
-    title: "[Tên khóa học UI/UX nâng cao]",
-    subtitle: "Chứng chỉ từ Coursera / Google / Thiết kế hệ thống",
-    description: "Hoàn thành khóa học 6 tháng chuyên sâu về Figma Advanced, Nghiên cứu trải nghiệm người dùng (UX Research) và Thiết kế Hệ thống (Design Systems) thực chiến.",
+    tag: "ADVANCED COURSE",
+    title: "[Advanced UI/UX Course Name]",
+    subtitle: "Certificate from Coursera / Google / Design Systems",
+    description: "Completed a 6-month intensive course covering Figma Advanced, UX Research, and hands-on Design Systems implementation.",
     accentPoint: false,
   },
   {
     code: "2025",
-    tag: "CHỨNG CHỈ",
-    title: "[Tên chứng chỉ tiếng Anh / Kỹ năng chuyên môn]",
+    tag: "CERTIFICATE",
+    title: "[Language / Professional Skill Certificate]",
     subtitle: "IELTS / TOEIC / Adobe Certified Professional",
-    description: "Đạt chứng chỉ IELTS [7.5] hoặc Adobe Certified Professional in Visual Design. Sẵn sàng làm việc trong môi trường quốc tế với khả năng ngoại ngữ lưu loát.",
+    description: "Achieved IELTS [7.5] or Adobe Certified Professional in Visual Design. Ready to work in an international environment with fluent language skills.",
     accentPoint: false,
   },
 ];
@@ -46,7 +46,7 @@ export default function EducationPage() {
             GATE 02 // EDUCATION RECORD
           </span>
           <h1 className="font-display text-4xl md:text-5xl font-extrabold text-mist tracking-tight mt-1 uppercase">
-            Học vấn & Bằng cấp
+            Education &amp; Qualifications
           </h1>
         </div>
 

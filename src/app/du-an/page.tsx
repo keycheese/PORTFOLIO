@@ -7,54 +7,54 @@ const PROJECTS = [
   {
     code: "PRJ-01",
     tag: "Design",
-    title: "[Tên dự án UI/UX App Mobile]",
-    subtitle: "Thiết kế giao diện ứng dụng di động",
-    description: "Giải quyết bài toán trải nghiệm người dùng đối với ứng dụng đặt lịch trình du lịch. Thực hiện đầy đủ quy trình từ UX Research, Wireframe đến UI Design chất lượng cao trên Figma.",
+    title: "[UI/UX Mobile App Project Name]",
+    subtitle: "Mobile Application Interface Design",
+    description: "Solved the UX challenge for a travel itinerary booking app. Completed the full process from UX Research and Wireframing to high-quality UI Design in Figma.",
     accentPoint: true,
   },
   {
     code: "PRJ-02",
     tag: "TVC",
-    title: "[Tên dự án TVC Quảng cáo]",
-    subtitle: "TVC quảng cáo sản phẩm công nghệ",
-    description: "Sản xuất video TVC giới thiệu sản phẩm tai nghe chống ồn mới. Đóng vai trò Đạo diễn hình ảnh và Biên kịch kỹ xảo, đem lại thông điệp âm thanh sống động.",
+    title: "[TVC Advertising Project Name]",
+    subtitle: "TVC for a Technology Product",
+    description: "Produced a TVC introducing a new noise-cancelling headphone product. Served as Visual Director and VFX Scriptwriter, delivering a vibrant audio-visual message.",
     accentPoint: false,
   },
   {
     code: "PRJ-03",
-    tag: "Phim ngắn",
-    title: "[Tên dự án Phim ngắn học đường]",
-    subtitle: "Phim ngắn thể loại tâm lý xã hội",
-    description: "Bài tập lớn cuối kỳ môn Sản xuất Phim. Đạt điểm số xuất sắc nhờ cốt truyện chặt chẽ, góc quay điện ảnh sáng tạo và phối nhạc độc đáo.",
+    tag: "Short Film",
+    title: "[School Short Film Project Name]",
+    subtitle: "Short Film — Social Psychology Genre",
+    description: "Final major project for Film Production course. Achieved an outstanding score through a tight narrative, creative cinematography, and distinctive music composition.",
     accentPoint: false,
   },
   {
     code: "PRJ-04",
     tag: "Design",
-    title: "[Tên dự án Branding thương hiệu]",
-    subtitle: "Bộ nhận diện thương hiệu quán cà phê",
-    description: "Sáng tạo logo, hệ thống màu sắc chủ đạo, thiết kế bao bì và bộ ấn phẩm truyền thông toàn diện cho chuỗi cửa hàng cà phê truyền thống.",
+    title: "[Brand Identity Project Name]",
+    subtitle: "Café Brand Identity System",
+    description: "Created the logo, core color palette, packaging design, and comprehensive media collateral for a traditional coffee shop chain.",
     accentPoint: false,
   },
   {
     code: "PRJ-05",
-    tag: "Khác",
-    title: "[Tên dự án MV Ca nhạc / Motion Graphic]",
-    subtitle: "Video hoạt họa đồ họa chuyển động",
-    description: "Kết hợp hoạt hình 2D và kỹ xảo đồ họa chuyển động để truyền tải lời bài hát đầy cảm xúc và nghệ thuật.",
+    tag: "Other",
+    title: "[Music Video / Motion Graphic Project Name]",
+    subtitle: "Animated Motion Graphic Video",
+    description: "Combined 2D animation and motion graphic VFX to convey song lyrics with emotional depth and artistic flair.",
     accentPoint: false,
   },
   {
     code: "PRJ-06",
     tag: "Design",
-    title: "[Tên dự án Website Portfolio]",
-    subtitle: "Trang web giới thiệu cá nhân",
-    description: "Thiết kế và phát triển nền tảng portfolio này với giao diện Boarding Pass độc quyền, tối ưu hóa trải nghiệm chuyển trang và tương tác vi mô.",
+    title: "[Portfolio Website Project Name]",
+    subtitle: "Personal Portfolio Website",
+    description: "Designed and developed this portfolio platform with an exclusive Boarding Pass-style interface, optimised for smooth page transitions and micro-interactions.",
     accentPoint: false,
   },
 ];
 
-const FILTER_TAGS = ["ALL", "Design", "TVC", "Phim ngắn", "Khác"];
+const FILTER_TAGS = ["ALL", "Design", "TVC", "Short Film", "Other"];
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
               GATE 03 // ACADEMIC PROJECTS
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-extrabold text-mist tracking-tight mt-1 uppercase">
-              Dự án học thuật
+              Academic Projects
             </h1>
           </div>
           <span className="font-mono text-[10px] text-sky/50 tracking-wider">
@@ -115,7 +115,7 @@ export default function ProjectsPage() {
         
         {filteredProjects.length === 0 && (
           <div className="text-center py-16 font-mono text-sm text-sky/40">
-            [ Không tìm thấy dự án nào tương thích ]
+            [ No matching projects found ]
           </div>
         )}
       </div>

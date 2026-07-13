@@ -6,25 +6,25 @@ const EXPERIENCES = [
   {
     code: "03/2025 - PRES",
     tag: "INTERNSHIP",
-    title: "[Tên Công ty Thiết kế / Tech Agency]",
-    subtitle: "Thực tập sinh Thiết kế UI/UX // UI/UX Designer Intern",
-    description: "Tham gia trực tiếp thiết kế các dự án thương mại dịch vụ của công ty, phối hợp chặt chẽ với team Developer để đảm bảo giao diện được lập trình chính xác và tối ưu hiệu ứng.",
+    title: "[Design Agency / Tech Agency Name]",
+    subtitle: "UI/UX Designer Intern",
+    description: "Directly contributed to commercial design projects, working closely with the Developer team to ensure interfaces were coded precisely and interactions were optimised.",
     accentPoint: true,
   },
   {
     code: "06/2024 - 12/2024",
     tag: "PART-TIME",
-    title: "[Tên Agency Truyền thông / Creative Studio]",
-    subtitle: "Graphic Designer kiêm Video Editor",
-    description: "Thiết kế bộ ấn phẩm Social Media hàng tháng cho đối tác, chỉnh sửa các video ngắn định dạng TikTok/Reels đem lại lượt tương tác tự nhiên lớn.",
+    title: "[Creative Studio / Media Agency Name]",
+    subtitle: "Graphic Designer & Video Editor",
+    description: "Designed monthly Social Media collateral for clients and edited short-form videos in TikTok/Reels format that generated significant organic engagement.",
     accentPoint: false,
   },
   {
     code: "2023 - 2024",
     tag: "FREELANCE",
-    title: "[Dự án Thiết kế Logo & Bộ nhận diện]",
+    title: "[Logo & Brand Identity Projects]",
     subtitle: "Freelance Designer",
-    description: "Nhận thiết kế logo, ấn phẩm bao bì sản phẩm và ấn phẩm truyền thông sự kiện cho các doanh nghiệp vừa và nhỏ, cá nhân kinh doanh tự do.",
+    description: "Took on logo design, product packaging, and event media collateral for small and medium-sized businesses and individual entrepreneurs.",
     accentPoint: false,
   },
 ];
@@ -38,7 +38,7 @@ export default function ExperiencePage() {
             GATE 05 // PROFESSIONAL EXPERIENCE
           </span>
           <h1 className="font-display text-4xl md:text-5xl font-extrabold text-mist tracking-tight mt-1 uppercase">
-            Kinh nghiệm làm việc
+            Work Experience
           </h1>
         </div>
 
